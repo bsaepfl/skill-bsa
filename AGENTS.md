@@ -162,7 +162,7 @@ This repository holds `bsa-hackathon`, an agent skill for participants at hackat
 | Path | Content |
 |------|---------|
 | `bsa-hackathon/SKILL.md` | Entry point: when to use the skill, which reference to read. Keep it short. |
-| `bsa-hackathon/references/event.md` | Facts for one event: dates, tracks, rules, judging, prizes. |
+| `bsa-hackathon/references/event.md` | Facts for one event: dates, tracks, rules, judging, prizes, starter template. |
 | `bsa-hackathon/references/setup.md` | Environment setup and testnet deployment. Not specific to one event. |
 | `bsa-hackathon/references/security.md` | Keys, wallets, and contract security. Not specific to one event. |
 | `bsa-hackathon/references/submission.md` | Submission and demo checklist. Not specific to one event. |
