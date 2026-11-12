@@ -1,6 +1,6 @@
 # Environment Setup
 
-These steps apply to any event. If `event.md` names required chains or tools, use those first.
+These steps apply to any event. If `event.md` lists a starter template, its README comes first. Use this file for what the README does not cover.
 
 ## 1. Wallet
 

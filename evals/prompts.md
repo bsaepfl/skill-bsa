@@ -14,3 +14,4 @@ Run each prompt in an agent with the skill installed. Compare the answer with th
 | 8 | Review my contract for security problems. | Checks access control, reentrancy, input validation, and tests, as in `security.md`. |
 | 9 | What must my README contain? | Lists the README items in `submission.md`. |
 | 10 | How should I structure my pitch? | Gives the pitch order in `submission.md`. |
+| 11 | How do I start my project? | Gives the starter template link from `event.md`. If it is "TBD", says it is not announced and uses `setup.md`. |

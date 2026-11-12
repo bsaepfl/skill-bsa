@@ -25,6 +25,12 @@ Update this file before each hackathon. Write "TBD" for every value that is not 
 - Code written before the event: TBD
 - Required chains or tools: TBD
 
+## Starter Template
+
+- Repository: TBD
+- Chain: TBD
+- Contents: TBD (for example: smart contract, front end, wallet connection)
+
 ## Tracks and Prizes
 
 | Track | Sponsor | Prize | Requirements |
