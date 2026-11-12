@@ -1,0 +1,6 @@
+.vscode/
+.env
+.env.*
+*.key
+keystore/
+.DS_Store

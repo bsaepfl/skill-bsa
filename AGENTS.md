@@ -3,7 +3,7 @@
 This file has two parts:
 
 - [Part 1: General Rules](#part-1-general-rules) apply to every project. Copy Part 1 unchanged to reuse it.
-- [Part 2: Project Rules](#part-2-project-rules-super-c) apply only to Super-C. They add to Part 1. Where a Part 2 rule is more specific than a Part 1 rule, follow Part 2.
+- [Part 2: Project Rules](#part-2-project-rules-skill-bsa) apply only to skill-bsa. They add to Part 1. Where a Part 2 rule is more specific than a Part 1 rule, follow Part 2.
 
 Follow these rules for all tasks unless the current user message gives a more specific instruction.
 
@@ -151,57 +151,41 @@ If natural and correct code fails because of such a defect:
 
 ---
 
-# Part 2: Project Rules (Super-C)
+# Part 2: Project Rules (skill-bsa)
 
-## 1. Rules That Bind Every Task
+## 1. Purpose
 
-1. Every compiler change must preserve the byte-identical two-generation fixpoint documented in `super-c-self-hosting`.
-2. Before reporting any task complete, apply the completion contract in `super-c-task-discipline`: every sub-item verified against reality, nothing silently deferred, every found defect fixed.
-3. After you complete a change to the compiler, language, build system, or standard library, apply `super-c-skill-maintenance`: tell the user which skills the change made stale and why, or state that none did.
+This repository holds `bsa-hackathon`, an agent skill for participants at hackathons of the EPFL Blockchain Student Association (BSA).
 
-## 2. Skills
+## 2. Layout
 
-The `skills/` directory is the project's reference documentation, packaged as agent skills. Read [skills/README.md](skills/README.md) for precedence, validation, and maintenance rules. Before working in an area, read the matching skill and its required references. The skills are authoritative for their areas. This file keeps only the working rules no skill covers.
+| Path | Content |
+|------|---------|
+| `bsa-hackathon/SKILL.md` | Entry point: when to use the skill, which reference to read. Keep it short. |
+| `bsa-hackathon/references/event.md` | Facts for one event: dates, tracks, rules, judging, prizes. |
+| `bsa-hackathon/references/setup.md` | Environment setup and testnet deployment. Not specific to one event. |
+| `bsa-hackathon/references/security.md` | Keys, wallets, and contract security. Not specific to one event. |
+| `bsa-hackathon/references/submission.md` | Submission and demo checklist. Not specific to one event. |
+| `evals/prompts.md` | Test prompts and expected behavior. |
 
-| Area | Skill |
-|------|-------|
-| Start of every task and before reporting done: failure-mode checklists | `super-c-task-discipline` |
-| End of every change task: report stale skills | `super-c-skill-maintenance` |
-| Any compiler change: fixpoint contract, bootstrap, porting patterns | `super-c-self-hosting` |
-| Invoking the compiler, build.toml, flags, environment variables | `super-c-binary` |
-| Writing or reviewing `.spc` code, naming, style, file organization | `super-c-language` |
-| Optimizing the compiler (profiling, benchmarks, fixpoint gate) | `super-c-compiler-optimization` |
-| Modifying compiler passes, pipeline order, Core IR, HIR | `super-c-compiler-internals` |
-| Writing or running tests, fixtures, leak gates | `super-c-testing` |
-| Designing tests: oracle choice, batching, cache and energy cost | `super-c-test-design` |
-| C interop, extern bindings, link flags | `super-c-ffi` |
-| Concurrent code: launch, channels, data parallelism | `super-c-concurrency` |
-| Targets: platforms, instruction sets, object formats, linkers | `super-c-targets` |
-| Comments and documentation rules | `super-c-documentation` |
+## 3. Content Rules
 
-## 3. Verification
+- Put event facts only in `event.md`. Update it before each hackathon.
+- Write "TBD" for a value that is not announced. Never invent dates, prizes, or rules.
+- Put detail in `references/`, not in `SKILL.md`.
+- Use only the open Agent Skills format: a `SKILL.md` with `name` and `description` frontmatter, and Markdown references. Participants use different agents, so do not depend on features of one agent tool.
+- Every command in a reference must work as written. Verify it before you add it.
 
-- Heavy verification is: full suite, fixpoint, `ci/gate.sh`, release bootstrap. Run it once, at the end (Part 1, section 7).
-- Web search does not replace the self-hosting fixpoint check.
-- Before any test, fixpoint, or commit claim, confirm which binary is at `./super-c`:
-  - After a plain build: run `cmp super-c build/debug/super-c`.
-  - After `check.sh`: run `cmp super-c build/bootstrap/test/super-c`.
+## 4. Security
 
-## 4. Code
+- Never commit secrets: private keys, seed phrases, API keys, `.env` files.
+- Instructions must use testnets only. Never tell a participant to use mainnet funds.
 
-- An unsatisfied interface bound in your own snippet means the snippet is wrong. Do not add std conformances unasked.
+## 5. Verification
 
-## 5. Tooling
+- Heavy verification is: run every prompt in `evals/prompts.md` with the skill installed and compare the result with the expected behavior. Run it once, at the end (Part 1, section 7).
+- When you change the skill, add or update the prompts that cover the change.
 
-- Use Super-C's own compiler, formatter, test runner, build system, LSP server, and benchmark harness when they fit the task.
+## 6. Git
 
-## 6. Dependencies
-
-- Keep compiler dependencies minimal. The compiler may depend on libc and no third-party library unless the project policy changes explicitly.
-- Do not add build-system generators, parser generators, or third-party compiler code.
-- Prefer direct POSIX and Win32 integration through the standard library.
-
-## 7. Git
-
-- Commit on `main`. Create a branch only to fix CI.
-- After the co-author check in the commit hook, the local commit-msg hook runs the full `check.sh`. `check.sh` moves the release binary onto `./super-c` and ends with its own rebuild there (`build/bootstrap/test/super-c`). See section 3 for the `cmp` check.
+- Commit on `main`.
