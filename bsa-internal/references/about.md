@@ -50,7 +50,6 @@ Research, Education, Communication, Logistics, IT, Sponsorship, and Industry, pl
 
 - Email: bsa@epfl.ch
 - Website: [www.bsaepfl.ch](https://www.bsaepfl.ch)
-- Hackathon website: [hackathon.bsaepfl.ch](https://hackathon.bsaepfl.ch)
 - Event calendar and registration: [lu.ma/bsaepfl](https://lu.ma/bsaepfl)
 - Photos: [photos.bsaepfl.ch](https://photos.bsaepfl.ch)
 - X: [x.com/bsaepfl](https://x.com/bsaepfl)

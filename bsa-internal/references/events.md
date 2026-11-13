@@ -8,6 +8,7 @@ All events took place at EPFL, Lausanne. Since 2025 they use the BC Building. Mo
 - 200 participants, 49 projects, $5,700 prize pool.
 - Sponsors and tracks: Belem Capital and Swissquote (one track each).
 - Free food for participants. Registration on Luma.
+- Event website: [hackathon.bsaepfl.ch](https://hackathon.bsaepfl.ch)
 
 ## Stablecoins & Payments Hackathon (March 2026)
 
