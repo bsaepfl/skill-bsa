@@ -17,7 +17,7 @@
 - March 2024: first BSA conference, the EPFL Blockchain Conference.
 - From 2025: a spring conference with a hackathon on the same theme (Privacy & Verifiability in 2025, Stablecoins & Payments in 2026), and an autumn hackathon.
 
-The website says BSA is among the first blockchain student associations in Switzerland. Its exact wording is ambiguous ("the first blockchain student associations"), so do not claim "the first" without checking.
+BSA is one of the first blockchain student associations in Switzerland.
 
 ## Activities
 

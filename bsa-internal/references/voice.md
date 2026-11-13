@@ -24,8 +24,6 @@ From BSA's website design brief.
 
 ## Channels
 
-From BSA's communication guidelines of 2019. Confirm with the Communication team that they still apply.
-
 - X: formal language. Announce events, share articles and research.
 - Instagram: not familiar, not too formal. Photos of events and of members at work, short series.
 - Events: announce 5 to 7 days before, and up to 2 weeks before for large events. Post a reminder 2 days before.

@@ -14,7 +14,7 @@ From the startups page of the BSA website.
 | Abyss | Perpetuals trading venue on Sui, built on DeepBook V3, up to 10x leverage. | [abyssprotocol.xyz](https://www.abyssprotocol.xyz/) |
 | Zyfai | AI-powered DeFi portfolio management. Raised $3M in seed funding (investors include Marc Zeller of Aave, Francesco Andreoli of MetaMask, Everstake, Tenzor, Brilliance Ventures). | [zyf.ai](https://www.zyf.ai/) |
 
-The website front page says "8 startups incubated", but the startups page lists 7. Use "7 startups listed" until this is confirmed.
+BSA has incubated 7 startups.
 
 ## Research Articles
 

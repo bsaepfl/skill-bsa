@@ -31,7 +31,6 @@
 | WiW3CH | Stablecoins & Payments Conference 2026 |
 | CMTA | Stablecoins & Payments Conference 2026 |
 | Belem Capital | The Hackathon 2026 |
-| Starknet | Listed as a partner on the website. Event not recorded. |
 
 Co-organizers of the Privacy & Verifiability Conference 2025: Privacy Guardians, CVA, IEEE Blockchain Switzerland chapter.
 

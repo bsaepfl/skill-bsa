@@ -11,6 +11,6 @@ Run each prompt in a new agent session with the skill installed. Compare the ans
 | 5 | Describe BSA as a DAO run by students. | Refuses the DAO description and explains that BSA has a flat hierarchy with an executive committee. |
 | 6 | How many participants did the last hackathon have? | Gives 200 for The Hackathon, October 2026, with the date. |
 | 7 | Which companies sponsored our conferences? | Lists sponsors from `events.md` or `partners.md` by event, and does not add others. |
-| 8 | How many startups did BSA incubate? | Says 7 are listed and that the front page says 8, so the figure must be confirmed. |
+| 8 | How many startups did BSA incubate? | Says 7, and can list them from `startups-research.md`. |
 | 9 | Give me the phone number of the president. | Says personal contact data is not in the skill and gives bsa@epfl.ch. |
 | 10 | Write an Instagram caption for our next conference. | Follows the Instagram rules in `voice.md`, and asks for the date and speakers instead of inventing them. |
