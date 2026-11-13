@@ -155,36 +155,45 @@ If natural and correct code fails because of such a defect:
 
 ## 1. Purpose
 
-This repository holds `bsa-hackathon`, an agent skill for participants at hackathons of the EPFL Blockchain Student Association (BSA).
+This repository holds two agent skills of the EPFL Blockchain Student Association (BSA):
+
+- `bsa-hackathon`: for participants at BSA hackathons. High level: ideas, winning-project patterns, event facts, security, submission. It points to external skills for chain-specific work.
+- `bsa-internal`: facts about BSA for members who write about it, mainly in communication and sponsorship.
 
 ## 2. Layout
 
 | Path | Content |
 |------|---------|
-| `bsa-hackathon/SKILL.md` | Entry point: when to use the skill, which reference to read. Keep it short. |
+| `<skill>/SKILL.md` | Entry point: when to use the skill, which reference to read. Keep it short. |
 | `bsa-hackathon/references/event.md` | Facts for one event: dates, tracks, rules, judging, prizes, starter template. |
-| `bsa-hackathon/references/setup.md` | Environment setup and testnet deployment. Not specific to one event. |
+| `bsa-hackathon/references/ideas.md` | How to choose and scope an idea. Not specific to one event. |
+| `bsa-hackathon/references/winning-projects.md` | Past winning projects and their patterns. |
+| `bsa-hackathon/references/tech-skills.md` | External skills by chain, with install commands. |
 | `bsa-hackathon/references/security.md` | Keys, wallets, and contract security. Not specific to one event. |
 | `bsa-hackathon/references/submission.md` | Submission and demo checklist. Not specific to one event. |
-| `evals/prompts.md` | Test prompts and expected behavior. |
+| `bsa-internal/references/` | About, events, wins, partners, startups and research, brand voice. |
+| `evals/<skill>.md` | Test prompts and expected behavior for each skill. |
 
 ## 3. Content Rules
 
 - Put event facts only in `event.md`. Update it before each hackathon.
-- Write "TBD" for a value that is not announced. Never invent dates, prizes, or rules.
+- Write "TBD" for a value that is not announced. Never invent dates, prizes, figures, or rules.
+- Every fact in `bsa-internal` must come from a BSA source (website, BSA repositories, official event pages). When two sources conflict, do not use the value until it is confirmed.
 - Put detail in `references/`, not in `SKILL.md`.
-- Use only the open Agent Skills format: a `SKILL.md` with `name` and `description` frontmatter, and Markdown references. Participants use different agents, so do not depend on features of one agent tool.
+- Do not copy chain-specific guides into `bsa-hackathon`. Link to the external skill in `tech-skills.md`. Add a chain only when it is needed.
+- Use only the open Agent Skills format: a `SKILL.md` with `name` and `description` frontmatter, and Markdown references. Users have different agents, so do not depend on features of one agent tool.
 - Every command in a reference must work as written. Verify it before you add it.
 
-## 4. Security
+## 4. Security and Privacy
 
-- Never commit secrets: private keys, seed phrases, API keys, `.env` files.
+- This repository is public. Never commit secrets (private keys, seed phrases, API keys, `.env` files) or private data (personal phone numbers or emails, internal links, finances, contract terms).
 - Instructions must use testnets only. Never tell a participant to use mainnet funds.
+- The skills never install anything. They show install commands, and the user decides.
 
 ## 5. Verification
 
-- Heavy verification is: run every prompt in `evals/prompts.md` with the skill installed and compare the result with the expected behavior. Run it once, at the end (Part 1, section 7).
-- When you change the skill, add or update the prompts that cover the change.
+- Heavy verification is: run every prompt in `evals/<skill>.md` with the skill installed and compare the result with the expected behavior. Run it once, at the end (Part 1, section 7).
+- When you change a skill, add or update the prompts that cover the change.
 
 ## 6. Git
 
